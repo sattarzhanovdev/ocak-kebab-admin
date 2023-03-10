@@ -1,0 +1,110 @@
+.statistics{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  .success{
+    width: 300px;
+    height: 100px;
+    background: #0288d1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .left{
+      width: 30%;
+      height: 100%;
+      background: #4caf50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      li{
+        list-style: none;
+        font-size: 50px;
+        color: white;
+      }
+    }
+    .right{
+      padding-left: 10px;
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      h5{
+        color: white;
+      }
+      h3{
+        color: white;
+      }
+    }
+  }
+  .baskets{
+    width: 300px;
+    height: 100px;
+    background: #0288d1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .left{
+      width: 30%;
+      height: 100%;
+      background: #ed6c02;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      li{
+        list-style: none;
+        font-size: 50px;
+        color: white;
+      }
+    }
+    .right{
+      padding-left: 10px;
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      h5{
+        color: white;
+      }
+      h3{
+        color: white;
+      }
+    }
+  }
+  .money{
+    width: 300px;
+    height: 100px;
+    background: #0288d1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .left{
+      width: 30%;
+      height: 100%;
+      background: #d32f2f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      li{
+        list-style: none;
+        font-size: 50px;
+        color: white;
+      }
+    }
+    .right{
+      padding-left: 10px;
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      h5{
+        color: white;
+      }
+      h3{
+        color: white;
+      }
+    }
+  }
+}

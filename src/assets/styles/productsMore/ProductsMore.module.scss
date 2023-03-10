@@ -1,0 +1,30 @@
+.more{
+  .image{
+    img{
+      width: 250px;
+    }
+  }
+  .moreInfo{
+    h4{
+      margin-top: 25px;
+    }
+    .ingredients{
+      margin-top: 25px;
+      h5{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px dotted black;
+        &:nth-child(1){
+          border-bottom: 1px solid black;
+          padding: 10px 0;
+        }
+        &.all{
+          border: 0;
+        }
+      }
+    }
+  }
+}

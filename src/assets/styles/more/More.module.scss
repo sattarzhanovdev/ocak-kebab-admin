@@ -1,0 +1,37 @@
+.basket{
+  width: 100%;
+  height: auto;
+  background: #0288d1;
+  .nothing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .amount{
+    border-top: 2px dashed black;
+    padding: 10px;
+    h3{
+      text-align: right;
+      color: white;
+      span{
+        margin-left: 15px;
+      }
+    }
+  }
+  .send_order{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    button{
+      width: 90%;
+      height: 40px;
+      background: white;
+      border: 0;
+      color: red;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+  }
+}

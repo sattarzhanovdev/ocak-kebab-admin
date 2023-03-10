@@ -1,0 +1,20 @@
+.orders{
+  margin-top: 60px;
+  table{
+    tbody{
+      tr{
+        position: relative;
+        td{
+          &:nth-child(4){
+            position: relative;
+          }
+          button{
+            position: absolute; 
+            right: 0;
+            top: 2px;
+          }
+        }
+      }
+    }
+  }
+}
