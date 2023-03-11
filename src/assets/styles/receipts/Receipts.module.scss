@@ -1,0 +1,12 @@
+.receipts{
+  table{
+    tbody{
+      tr{
+        &:hover{
+          background: #f5f5f5;
+        }
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -3,7 +3,9 @@ import AddProducts from "./addProduct/AddProducts";
 import Auth from "./auth/Auth";
 import Main from "./main/Main";
 import More from "./more/More";
+import MoreSuccess from "./more_success/MoreSuccess";
 import ProductsMore from "./productsMore/ProductsMore";
+import Receipts from "./receipts/Receipts";
 
 export const Routers = {
   Main,
@@ -11,5 +13,7 @@ export const Routers = {
   More,
   AddProducts,
   Adding,
-  ProductsMore
+  ProductsMore,
+  Receipts,
+  MoreSuccess
 }

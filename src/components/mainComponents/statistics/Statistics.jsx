@@ -23,8 +23,8 @@ const Statistics = ({}) => {
         setSuccess(result.length)
       })
 
-    REQUEST.getOrders()
-      .then(res => setBaskets(res.data.length))
+      const baskets = localStorage.getItem('ordersNow')
+      setBaskets(baskets)
 
       setInterval(() => setDep('ref', Math.random(0, 10), 1000))
     }, [dep])

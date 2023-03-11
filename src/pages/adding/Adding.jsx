@@ -1,6 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import { BiPlus } from 'react-icons/bi'
+import { BiPlus, BiTrash } from 'react-icons/bi'
 import { useNavigate } from 'react-router-dom'
 import { REQUEST } from '../../api'
 import cls from '../../assets/styles/adding/Adding.module.scss'
@@ -62,6 +62,14 @@ const Adding = () => {
 
   const post_ingred = (data) => {
     REQUEST.postIngredientsDetail({...data, product: productId, ingredient: ingredientsId})
+      .then(res => {
+        setDep('ref' + Math.random(0, 10))
+        reset()
+      })
+  }
+
+  const delete_ingredient = (id) => {
+    REQUEST.deleteIngredient(id)
       .then(res => {
         setDep('ref' + Math.random(0, 10))
         reset()
@@ -152,6 +160,13 @@ const Adding = () => {
                     placeholder={"Грамм"}
                     value={item.gram}
                   />
+                  <select value={item.type_weight}>
+                    <option value="гр.">грамм</option>
+                    <option value="шт.">штук</option>
+                  </select>
+                  <button onClick={() => delete_ingredient(item.id)}>
+                    <BiTrash />
+                  </button>
                 </div>
               </form>
             ))
@@ -169,6 +184,10 @@ const Adding = () => {
                 placeholder={"Грамм"}
                 {...register('gram')}
               />
+              <select {...register('type_weight')}>
+                <option value="гр.">грамм</option>
+                <option value="шт.">штук</option>
+              </select>
               <button type='submit'>
                 <BiPlus />
               </button>

@@ -6,5 +6,5 @@ export const requestPath = {
   categories: '/categories/',
   ingredients: '/ingredients/ingredient/',
   ingredientsMain: '/ingredients/main/',
-  successOrder: '/success_orders/',
+  successOrder: '/success_orders.json',
 }

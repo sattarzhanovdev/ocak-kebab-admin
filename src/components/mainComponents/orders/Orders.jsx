@@ -7,21 +7,35 @@ const Orders = () => {
   const [ orders, setOrders ] = React.useState(null)
   const [ dep, setDep ] = React.useState('')
 
+  const ordersNow = localStorage.getItem('ordersNow')
+
   React.useEffect(() => {
     REQUEST.getOrders()
       .then(res => {
         setOrders(res.data.reverse())
+        localStorage.setItem('ordersNow', res.data.length)
       })
       setInterval(() => setDep('ref' + Math.random(0, 10)), 10000)
       setDep('ref', Math.random(0, 10))
-    }, [dep])
+    }, [dep, ordersNow])
 
   const Navigate = useNavigate()
 
   const close_order = (id, tableId, item) => {
-    REQUEST.postSuccessOrders({qrcode_id: tableId, base: item})
+    const date = new Date()
+
+    REQUEST.postSuccessOrders({
+      qrcode_id: tableId, 
+      time: `${date.getHours() < 10 ? `0${date.getHours()}` : date.getHours()}:${date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes()}:${date.getSeconds() < 10 ? `0${date.getSeconds()}` : date.getSeconds()}`, 
+      date: `${date.getDay() === 0 ? date.getDay() + 12 : date.getDay()}.${date.getMonth() < 10 ? `0${date.getMonth()}` : date.getMonth()}.${date.getFullYear()}`, 
+      amount: item.basket.sum_price,
+      basket_products: item
+    })
     REQUEST.deleteOrder(id)
-    setDep('ref', Math.random(0, 10))
+      .then(res => {
+        localStorage.setItem('ordersNow', res.data.le)
+        setDep('ref', Math.random(0, 10))
+      })
   }
 
   return (
@@ -66,6 +80,7 @@ const Orders = () => {
               )) : 
               <tr>
                 <td>Ничего нет</td>
+                <td>ㅤ</td>
                 <td>ㅤ</td>
                 <td>ㅤ</td>
               </tr>

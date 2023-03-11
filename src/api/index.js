@@ -1,4 +1,4 @@
-import { getProducts, postProducts, postOrders, getOrders, getBaskets, postBaskets, postBasketsDetails, deleteBasket, getCategories, getIngredients, getSuccessOrders, getOrdersMore, postSuccessOrders, deleteOrder, deleteProduct, putProducts, postIngredients, postIngredientsDetail, getIngredientsDetails } from "./api";
+import { getProducts, postProducts, postOrders, getOrders, getBaskets, postBaskets, postBasketsDetails, deleteBasket, getCategories, getIngredients, getSuccessOrders, getOrdersMore, postSuccessOrders, deleteOrder, deleteProduct, putProducts, postIngredients, postIngredientsDetail, getIngredientsDetails, deleteIngredient } from "./api";
 
 export const REQUEST = {
   getProducts,
@@ -19,5 +19,6 @@ export const REQUEST = {
   putProducts,
   postIngredients,
   postIngredientsDetail,
-  getIngredientsDetails
+  getIngredientsDetails,
+  deleteIngredient
 } 

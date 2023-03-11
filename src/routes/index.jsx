@@ -14,6 +14,8 @@ function Routes() {
           <Route path={Apps.products} element={<Routers.AddProducts />} />
           <Route path={Apps.addProducts} element={<Routers.Adding />} />
           <Route path={Apps.productsMore} element={<Routers.ProductsMore />} />
+          <Route path={Apps.receipts} element={<Routers.Receipts />} />
+          <Route path={Apps.successMore} element={<Routers.MoreSuccess />} />
         </Switch>
       </React.Suspense>
     </React.Fragment>
