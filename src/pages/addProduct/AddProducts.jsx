@@ -50,11 +50,10 @@ const AddProducts = () => {
                   key={i}
                   onClick={() => {
                     localStorage.setItem('productsItem', JSON.stringify(item))
-                    Navigate(`/product/${item.id}`)
                   }}
                 >
                   <td>
-                    <img src={item.image} alt={item.title} />
+                    <img src={item.image} alt={item.title} onClick={() => Navigate(`/product/${item.id}`)}/>
                   </td>
                   <td className='text-center'>{item.title}</td>
                   <td className='text-center'>{item.category.title}</td>
