@@ -16,7 +16,10 @@ const Orders = () => {
         localStorage.setItem('ordersNow', res.data.length)
       })
       setInterval(() => setDep('ref' + Math.random(0, 10)), 10000)
-      setDep('ref', Math.random(0, 10))
+      
+      setTimeout(() => {
+        setDep('ref', Math.random(0, 10))
+      }, 1000)
     }, [dep, ordersNow])
 
   const Navigate = useNavigate()

@@ -62,7 +62,7 @@ const Adding = () => {
 
   const post_ingred = (data) => {
     REQUEST.postIngredientsDetail({...data, product: productId, ingredient: ingredientsId})
-      .then(res => {
+      .then(() => {
         setDep('ref' + Math.random(0, 10))
         reset()
       })
@@ -164,7 +164,7 @@ const Adding = () => {
                     <option value="гр.">грамм</option>
                     <option value="шт.">штук</option>
                   </select>
-                  <button onClick={() => delete_ingredient(item.id)}>
+                  <button onClick={() => delete_ingredient(item.id)} className={cls.delete}>
                     <BiTrash />
                   </button>
                 </div>

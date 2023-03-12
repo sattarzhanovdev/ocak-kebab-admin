@@ -8,6 +8,7 @@ function Routes() {
     <React.Fragment>
       <React.Suspense fallback={''}>
         <Switch>
+          <Route path={'*'} element={<Routers.Main />} />
           <Route path={Apps.main} element={<Routers.Main />} />
           <Route path={Apps.auth} element={<Routers.Auth />} />
           <Route path={Apps.foodsMore} element={<Routers.More />} />

@@ -42,6 +42,9 @@
           }
         }
         button{
+          &.delete{
+            color: red;
+          }
           background: none;
           border: 0;
           list-style: none;

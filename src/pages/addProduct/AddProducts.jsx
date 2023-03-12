@@ -11,6 +11,10 @@ const AddProducts = () => {
   React.useEffect(() => {
     REQUEST.getProducts()
       .then(res => setProducts(res.data.reverse()))
+
+    setTimeout(() => {
+      setDep('ref', Math.random(0, 10))
+    }, 1000)
   }, [dep])
 
   const Navigate = useNavigate()
@@ -69,6 +73,8 @@ const AddProducts = () => {
               )) : 
               <tr>
                 <td>Ничего нет</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
                 <td>ㅤ</td>
                 <td>ㅤ</td>
               </tr>
